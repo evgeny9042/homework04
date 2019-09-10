@@ -9,7 +9,7 @@ set_target_properties(print_ip PROPERTIES
     CXX_STANDARD_REQUIRED ON
 )
 
-install(TARGETS allocator  RUNTIME DESTINATION bin)
+install(TARGETS print_ip  RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
