@@ -20,7 +20,7 @@ deploy:
   keep_history: true
   on:
     branch: master
-	
+
 deploy2:
   provider: script
   skip_cleanup: true
