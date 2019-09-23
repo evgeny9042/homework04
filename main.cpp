@@ -48,7 +48,6 @@ decltype(typename std::enable_if<!std::is_same<std::string, T>::value, void>::ty
 
 int main(int argc, char const *argv[])
 {
-
   print_ip(char(-1));
   print_ip(short(0));
   print_ip(int(2130706433));
