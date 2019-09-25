@@ -1,0 +1,51 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\decltype(typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ std\+::string, T $>$\+::value, void $>$\+::type(), begin(std\+::declval$<$ T $>$()), end(std\+::declval$<$ T $>$()), void()) \hyperlink{main_8cpp_a46f678aa00e33212a58c23b90d8dcc35}{print\+\_\+ip} (T container)
+\item 
+{\footnotesize template$<$typename T $>$ }\\decltype(typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ std\+::string, T $>$\+::value, void $>$\+::type(), void()) \hyperlink{main_8cpp_a21b08b86eb94eac1e2ffbf111082f68b}{print\+\_\+ip} (T container)
+\item 
+{\footnotesize template$<$typename T $>$ }\\decltype(typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ std\+::string, T $>$\+::value, void $>$\+::type(), std\+::cout$<$$<$ std\+::declval$<$ T $>$(), void()) \hyperlink{main_8cpp_a701243df6601d0941c20ec32a06a5eac}{print\+\_\+ip} (T value)
+\item 
+int \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char const $\ast$argv[])}{main(int argc, char const *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{}\label{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}
+\index{main.\+cpp@{main.\+cpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T container)}{print_ip(T container)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ decltype(typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$std\+::string, T$>$\+::value, void$>$\+::type(), begin(std\+::declval$<$T$>$()), end(std\+::declval$<$T$>$()), void()) print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{container}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a46f678aa00e33212a58c23b90d8dcc35}{}\label{main_8cpp_a46f678aa00e33212a58c23b90d8dcc35}
+\index{main.\+cpp@{main.\+cpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T container)}{print_ip(T container)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ decltype(typename std\+::enable\+\_\+if$<$std\+::is\+\_\+same$<$std\+::string, T$>$\+::value, void$>$\+::type(), void()) print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{container}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a21b08b86eb94eac1e2ffbf111082f68b}{}\label{main_8cpp_a21b08b86eb94eac1e2ffbf111082f68b}
+\index{main.\+cpp@{main.\+cpp}!print\+\_\+ip@{print\+\_\+ip}}
+\index{print\+\_\+ip@{print\+\_\+ip}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{\texorpdfstring{print\+\_\+ip(\+T value)}{print_ip(T value)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ decltype(typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$std\+::string, T$>$\+::value, void$>$\+::type(), std\+::cout $<$$<$ std\+::declval$<$T$>$(), void()) print\+\_\+ip (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_a701243df6601d0941c20ec32a06a5eac}{}\label{main_8cpp_a701243df6601d0941c20ec32a06a5eac}

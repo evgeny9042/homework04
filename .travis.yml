@@ -5,6 +5,7 @@ compiler:
   
 before_script:
   - sudo apt-get install libboost-test-dev -y
+  - sudo apt-get install doxygen
 
 script:
   - mkdir build
@@ -12,6 +13,8 @@ script:
   - cmake ..
   - cmake --build .
   - cmake --build . --target package
+  - cd ..
+  - doxygen Doxyfile
 
 deploy:
   provider: pages
@@ -20,5 +23,3 @@ deploy:
   keep_history: true
   on:
     branch: master
-  edge:
-    branch: v1.8.47
