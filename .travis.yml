@@ -14,7 +14,7 @@ script:
   - cmake --build .
   - cmake --build . --target package
   - cd ..
-  - doxygen doxyfile
+  - doxygen Doxyfile
 
 deploy:
   provider: pages
