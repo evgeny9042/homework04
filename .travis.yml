@@ -12,6 +12,8 @@ script:
   - cmake ..
   - cmake --build .
   - cmake --build . --target package
+  - cd ..
+  - doxygen doxyfile
 
 deploy:
   provider: pages
@@ -20,5 +22,3 @@ deploy:
   keep_history: true
   on:
     branch: master
-  edge:
-    branch: v1.8.47
