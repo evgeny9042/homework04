@@ -16,7 +16,7 @@ script:
   - cd ..
   - doxygen Doxyfile
 
-job1:
+job11:
   stage: deploy
   provider: pages
   skip_cleanup: true
@@ -25,7 +25,7 @@ job1:
   on:
     branch: master
 	
-job2:
+job12:
   stage: deploy
   skip_cleanup: true
   script:
