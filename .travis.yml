@@ -3,16 +3,11 @@ language: cpp
 compiler:
   - gcc
   
-stages:
-  - build
-  - deploy
-
-job2:
-  stage: build
-  before_script:
+before_script:
   - sudo apt-get install libboost-test-dev -y
   - sudo apt-get install doxygen
-  script:
+
+script:
   - mkdir build
   - cd build
   - cmake ..
@@ -20,19 +15,13 @@ job2:
   - cmake --build . --target package
   - cd ..
   - doxygen Doxyfile
+  - cd build
+  - curl -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uevgeny9042:$BINTRAY_API_KEY "https://api.bintray.com/content/rtti/homework/homework04/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"	
 
-job3:
-  stage: deploy
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
-	
-job4:
-  stage: deploy
-  provider: script
-  skip_cleanup: true
-  script:
-  - curl -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uevgeny9042:$BINTRAY_API_KEY "https://api.bintray.com/content/rtti/homework/homework04/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"	
