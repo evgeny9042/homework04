@@ -15,11 +15,13 @@ script:
   - cmake --build . --target package
   - cd ..
   - doxygen Doxyfile
+  - cd build
+  - curl -T print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -uevgeny9042:$BINTRAY_API_KEY "https://api.bintray.com/content/rtti/homework/homework04/$TRAVIS_BUILD_NUMBER/print_ip-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"	
 
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
